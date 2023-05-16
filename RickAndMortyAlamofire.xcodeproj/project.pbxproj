@@ -66,14 +66,10 @@
 		46437AAF2A142BA7002DEC58 /* RickAndMortyAlamofire */ = {
 			isa = PBXGroup;
 			children = (
+				46437AD22A142CAD002DEC58 /* Controllers */,
+				46437AD12A142CA5002DEC58 /* Views */,
+				46437AD02A142C91002DEC58 /* Others */,
 				46437AC72A142BEC002DEC58 /* Models */,
-				46437AB02A142BA7002DEC58 /* AppDelegate.swift */,
-				46437AB22A142BA7002DEC58 /* SceneDelegate.swift */,
-				46437AB42A142BA7002DEC58 /* ViewController.swift */,
-				46437AB62A142BA7002DEC58 /* Main.storyboard */,
-				46437AB92A142BA8002DEC58 /* Assets.xcassets */,
-				46437ABB2A142BA8002DEC58 /* LaunchScreen.storyboard */,
-				46437ABE2A142BA8002DEC58 /* Info.plist */,
 			);
 			path = RickAndMortyAlamofire;
 			sourceTree = "<group>";
@@ -87,6 +83,34 @@
 				46437ACE2A142C58002DEC58 /* Location.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		46437AD02A142C91002DEC58 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				46437AB02A142BA7002DEC58 /* AppDelegate.swift */,
+				46437AB22A142BA7002DEC58 /* SceneDelegate.swift */,
+				46437AB92A142BA8002DEC58 /* Assets.xcassets */,
+				46437ABE2A142BA8002DEC58 /* Info.plist */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		46437AD12A142CA5002DEC58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46437AB62A142BA7002DEC58 /* Main.storyboard */,
+				46437ABB2A142BA8002DEC58 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		46437AD22A142CAD002DEC58 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				46437AB42A142BA7002DEC58 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,7 +345,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HYWSXS9XNK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RickAndMortyAlamofire/Info.plist;
+				INFOPLIST_FILE = RickAndMortyAlamofire/Others/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -349,7 +373,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HYWSXS9XNK;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RickAndMortyAlamofire/Info.plist;
+				INFOPLIST_FILE = RickAndMortyAlamofire/Others/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
