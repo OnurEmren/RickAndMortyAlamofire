@@ -14,6 +14,10 @@
 		46437ABA2A142BA8002DEC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46437AB92A142BA8002DEC58 /* Assets.xcassets */; };
 		46437ABD2A142BA8002DEC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46437ABB2A142BA8002DEC58 /* LaunchScreen.storyboard */; };
 		46437AC62A142BCC002DEC58 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 46437AC52A142BCC002DEC58 /* Alamofire */; };
+		46437AC92A142C0F002DEC58 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46437AC82A142C0F002DEC58 /* Info.swift */; };
+		46437ACB2A142C21002DEC58 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46437ACA2A142C21002DEC58 /* Results.swift */; };
+		46437ACD2A142C2F002DEC58 /* Origin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46437ACC2A142C2F002DEC58 /* Origin.swift */; };
+		46437ACF2A142C58002DEC58 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46437ACE2A142C58002DEC58 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,10 @@
 		46437AB92A142BA8002DEC58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46437ABC2A142BA8002DEC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46437ABE2A142BA8002DEC58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46437AC82A142C0F002DEC58 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		46437ACA2A142C21002DEC58 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		46437ACC2A142C2F002DEC58 /* Origin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Origin.swift; sourceTree = "<group>"; };
+		46437ACE2A142C58002DEC58 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 		46437AAF2A142BA7002DEC58 /* RickAndMortyAlamofire */ = {
 			isa = PBXGroup;
 			children = (
+				46437AC72A142BEC002DEC58 /* Models */,
 				46437AB02A142BA7002DEC58 /* AppDelegate.swift */,
 				46437AB22A142BA7002DEC58 /* SceneDelegate.swift */,
 				46437AB42A142BA7002DEC58 /* ViewController.swift */,
@@ -67,6 +76,17 @@
 				46437ABE2A142BA8002DEC58 /* Info.plist */,
 			);
 			path = RickAndMortyAlamofire;
+			sourceTree = "<group>";
+		};
+		46437AC72A142BEC002DEC58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				46437AC82A142C0F002DEC58 /* Info.swift */,
+				46437ACA2A142C21002DEC58 /* Results.swift */,
+				46437ACC2A142C2F002DEC58 /* Origin.swift */,
+				46437ACE2A142C58002DEC58 /* Location.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,8 +167,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				46437AB52A142BA7002DEC58 /* ViewController.swift in Sources */,
+				46437AC92A142C0F002DEC58 /* Info.swift in Sources */,
 				46437AB12A142BA7002DEC58 /* AppDelegate.swift in Sources */,
+				46437ACF2A142C58002DEC58 /* Location.swift in Sources */,
 				46437AB32A142BA7002DEC58 /* SceneDelegate.swift in Sources */,
+				46437ACB2A142C21002DEC58 /* Results.swift in Sources */,
+				46437ACD2A142C2F002DEC58 /* Origin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
