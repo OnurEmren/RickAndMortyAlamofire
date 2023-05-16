@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Results: Codable {
+struct Results: Decodable {
     let id: Int
     let name: String
     let status: String
