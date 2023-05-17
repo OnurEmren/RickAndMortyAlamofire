@@ -8,19 +8,25 @@
 import Foundation
 import Alamofire
 
-class ServiceEndPoint {
-    static func characterUrl() -> String {
-        return "\(RMRequest(endPoint: .character))"
+
+enum ServiceEndPoint: String {
+    case BASE_URL = "https://rickandmortyapi.com/api"
+    case PATH = "/character"
+
+    static func characterPath() -> String {
+        return "\(BASE_URL.rawValue)\(PATH.rawValue)"
     }
 }
 
-protocol FetchCharacterProtocol {
-    func getData(response: @escaping ([Result]?) -> Void)
+protocol RmProtocol {
+    func fetchData(response: @escaping ([Result]?) -> Void)
 }
 
-struct RmService: FetchCharacterProtocol {
-    func getData(response: @escaping ([Result]?) -> Void) {
-        AF.request(ServiceEndPoint.characterUrl()).responseDecodable(of: RmInfo.self) { model in
+
+struct RmService: RmProtocol {
+
+    func fetchData(response: @escaping ([Result]?) -> Void) {
+        AF.request(ServiceEndPoint.characterPath()).responseDecodable(of: RmInfo.self) { (model) in
             guard let data = model.value else {
                 response(nil)
                 return
@@ -28,6 +34,7 @@ struct RmService: FetchCharacterProtocol {
             response(data.results)
         }
     }
+
 }
 
 
