@@ -25,7 +25,7 @@ struct RMRequest {
         self.endPoint = endPoint
         self.pathComponents = pathComponents
     }
-    private var urlString: String {
+    public var urlString: String {
         var string = Constants.BASE_URL
         string += "/"
         string += endPoint.rawValue

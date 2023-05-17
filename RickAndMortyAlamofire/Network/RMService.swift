@@ -8,25 +8,25 @@
 import Foundation
 import Alamofire
 
-
-enum ServiceEndPoint: String {
-    case BASE_URL = "https://rickandmortyapi.com/api"
-    case PATH = "/character"
-
-    static func characterPath() -> String {
-        return "\(BASE_URL.rawValue)\(PATH.rawValue)"
+class ServiceEndPoint {
+    static func characterUrl() -> String {
+        let request = RMRequest(endPoint: .character)
+        return request.urlString // RMRequest nesnesini string olarak döndürün
     }
 }
 
-protocol RmProtocol {
-    func fetchData(response: @escaping ([Result]?) -> Void)
+protocol FetchCharacterProtocol {
+    func getData(response: @escaping ([Result]?) -> Void)
 }
 
-
-struct RmService: RmProtocol {
-
-    func fetchData(response: @escaping ([Result]?) -> Void) {
-        AF.request(ServiceEndPoint.characterPath()).responseDecodable(of: RmInfo.self) { (model) in
+struct RmService: FetchCharacterProtocol {
+    func getData(response: @escaping ([Result]?) -> Void) {
+        guard let url = URL(string: ServiceEndPoint.characterUrl()) else {
+            response(nil)
+            return
+        }
+        
+        AF.request(url).responseDecodable(of: RmInfo.self) { model in
             guard let data = model.value else {
                 response(nil)
                 return
@@ -34,8 +34,8 @@ struct RmService: RmProtocol {
             response(data.results)
         }
     }
-
 }
+
 
 
 

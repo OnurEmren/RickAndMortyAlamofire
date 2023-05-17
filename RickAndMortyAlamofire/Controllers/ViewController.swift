@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        rmService.fetchData { results in
+        rmService.getData { results in
                  // Callback ile dönen sonuçları kontrol et
                  if let results = results {
                      // Verileri başarılı bir şekilde aldık, kullanabiliriz
