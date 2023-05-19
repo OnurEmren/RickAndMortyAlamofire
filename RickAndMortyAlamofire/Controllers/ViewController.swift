@@ -8,28 +8,57 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+protocol OutputCharacters {
+    func getCharactersData(values: [Result])
+}
 
-    let rmService = RmService()
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var characterTableView: UITableView!
+    lazy var viewModel: RickAndMortyProtocol = CharacterViewModel()
+    private var results: [Result] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        rmService.getData { results in
-                 // Callback ile dönen sonuçları kontrol et
-                 if let results = results {
-                     // Verileri başarılı bir şekilde aldık, kullanabiliriz
-                     print(results)
-                 } else {
-                     // Veri alınırken bir hata oluştu veya veri boş geldi
-                     print("Veri alınamadı veya boş geldi.")
-                 }
-             }
-        
-        let request = RMRequest(endPoint: .character)
-        print(request.url)
-        
-    }
 
+        self.characterTableView.delegate = self
+        self.characterTableView.dataSource = self
+        viewModel.setDelegate(output: self)
+        viewModel.fetchItems()
+    }
+    
+    //MARK: - Table View
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return results.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        guard let cell: CharacterCell = tableView.dequeueReusableCell(withIdentifier: CharacterCell.identifier) as? CharacterCell
+        else {
+            return UITableViewCell()
+        }
+        
+        cell.saveModel(character: results[indexPath.row])
+        let nameResult = results[indexPath.row]
+        cell.textLabel?.text = nameResult.name
+        cell.detailTextLabel?.text = nameResult.status
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
 }
 
+//MARK: - Extensions
+// Protocolü View Controllera ekliyoruz.
+extension ViewController: OutputCharacters {
+    func getCharactersData(values: [Result]) {
+        results = values
+        characterTableView.reloadData()
+    }
+}
