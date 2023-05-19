@@ -8,15 +8,12 @@
 import Foundation
 
 protocol RickAndMortyProtocol{
-    
-   
     var rickAndMortyCharacters: [Result] { get set }
     var rickyAndMortyServices: FetchCharacterProtocol { get }
     var rickAndMortyOutput: OutputCharacters? { get }
     
     func setDelegate(output: OutputCharacters)
     func fetchItems()
-    
 }
 
 final class CharacterViewModel: RickAndMortyProtocol {
@@ -39,6 +36,4 @@ final class CharacterViewModel: RickAndMortyProtocol {
             self?.rickAndMortyOutput?.getCharactersData(values: self?.rickAndMortyCharacters ?? [])
         }
     }
-    
-    
 }

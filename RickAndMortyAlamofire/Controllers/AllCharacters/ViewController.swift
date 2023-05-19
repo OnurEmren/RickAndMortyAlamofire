@@ -21,7 +21,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         self.characterTableView.delegate = self
         self.characterTableView.dataSource = self
         viewModel.setDelegate(output: self)
@@ -33,25 +32,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return results.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        guard let cell: CharacterCell = tableView.dequeueReusableCell(withIdentifier: CharacterCell.identifier) as? CharacterCell
-        else {
+        guard let cell: CharacterCell = tableView.dequeueReusableCell(
+            withIdentifier: CharacterCell.identifier
+        ) as? CharacterCell else {
             return UITableViewCell()
         }
-        
         cell.saveModel(character: results[indexPath.row])
-        let nameResult = results[indexPath.row]
-        cell.textLabel?.text = nameResult.name
-        cell.detailTextLabel?.text = nameResult.status
         return cell
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
 }
 
 //MARK: - Extensions

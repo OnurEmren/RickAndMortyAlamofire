@@ -11,19 +11,19 @@ import UIKit
 
 class CharacterCell: UITableViewCell {
     
-//    @IBOutlet weak var nameLabel: UILabel!
-//    @IBOutlet weak var descriptionLabel: UILabel!
     
-    private var titleLabel: UILabel!
-    private var descriptionLabel: UILabel!
-   // @IBOutlet weak var characterImage: UIImageView!
-    private let randomImage: String  =  "https://picsum.photos/200/300"
-    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var characterImage: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    private let randomImage = ""
     static let identifier = "characterCell"
     
     func saveModel(character: Result) {
-        titleLabel?.text = character.name
+        nameLabel?.text = character.name
         descriptionLabel?.text = character.status
-
+        characterImage.af.setImage(
+            withURL:
+                URL(string: character.image ?? randomImage) ?? URL(string: randomImage)!
+        )
     }
 }

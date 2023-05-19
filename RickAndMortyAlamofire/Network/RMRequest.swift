@@ -9,12 +9,10 @@ import Foundation
 
 
 struct RMRequest {
-    
     private struct Constants {
         static let BASE_URL = "https://rickandmortyapi.com/api"
         static let PATH = RMRequest(endPoint: .character)
     }
-    
     private let endPoint: EndPoint
     private let pathComponents: [String]
     

@@ -142,7 +142,7 @@
 		46437AD22A142CAD002DEC58 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				46437AB42A142BA7002DEC58 /* ViewController.swift */,
+				46C9A7772A17CB3E001049FA /* AllCharacters */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +161,14 @@
 				46A178862A16A35000603D61 /* CharacterViewModel.swift */,
 			);
 			path = CharacterViewModel;
+			sourceTree = "<group>";
+		};
+		46C9A7772A17CB3E001049FA /* AllCharacters */ = {
+			isa = PBXGroup;
+			children = (
+				46437AB42A142BA7002DEC58 /* ViewController.swift */,
+			);
+			path = AllCharacters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
