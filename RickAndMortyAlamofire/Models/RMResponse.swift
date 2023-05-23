@@ -11,3 +11,5 @@ struct RMResponse: Codable {
     let info: Info?
     let results: [Result]?
 }
+
+//Add Error

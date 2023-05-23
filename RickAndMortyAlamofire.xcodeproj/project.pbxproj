@@ -11,11 +11,11 @@
 		46432FFA2A14D7EA007949EF /* CharacterResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46432FF92A14D7EA007949EF /* CharacterResult.swift */; };
 		46437AB12A142BA7002DEC58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46437AB02A142BA7002DEC58 /* AppDelegate.swift */; };
 		46437AB32A142BA7002DEC58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46437AB22A142BA7002DEC58 /* SceneDelegate.swift */; };
-		46437AB52A142BA7002DEC58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46437AB42A142BA7002DEC58 /* ViewController.swift */; };
-		46437AB82A142BA7002DEC58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46437AB62A142BA7002DEC58 /* Main.storyboard */; };
+		46437AB52A142BA7002DEC58 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46437AB42A142BA7002DEC58 /* CharacterViewController.swift */; };
 		46437ABA2A142BA8002DEC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46437AB92A142BA8002DEC58 /* Assets.xcassets */; };
 		46437ABD2A142BA8002DEC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46437ABB2A142BA8002DEC58 /* LaunchScreen.storyboard */; };
 		46437AC62A142BCC002DEC58 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 46437AC52A142BCC002DEC58 /* Alamofire */; };
+		46534A182A1BEEE100D08FDF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 46534A172A1BEEE100D08FDF /* SnapKit */; };
 		46937BB72A15423E007E5795 /* RMRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46937BB62A15423E007E5795 /* RMRequest.swift */; };
 		46937BB92A1542CE007E5795 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46937BB82A1542CE007E5795 /* EndPoint.swift */; };
 		46A178792A16A1C900603D61 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A178782A16A1C900603D61 /* Location.swift */; };
@@ -26,6 +26,11 @@
 		46A178832A16A30100603D61 /* RMResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A178822A16A30100603D61 /* RMResponse.swift */; };
 		46A178872A16A35000603D61 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A178862A16A35000603D61 /* CharacterViewModel.swift */; };
 		46A178892A177B3600603D61 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A178882A177B3600603D61 /* CharacterCell.swift */; };
+		46A8D9D42A1959DE00BD46C1 /* CharacterContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A8D9D32A1959DE00BD46C1 /* CharacterContracts.swift */; };
+		46A8D9D92A19682000BD46C1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A8D9D82A19682000BD46C1 /* Coordinator.swift */; };
+		46A8D9DB2A1968F200BD46C1 /* CharacterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A8D9DA2A1968F200BD46C1 /* CharacterCoordinator.swift */; };
+		46A8D9DE2A196D3400BD46C1 /* CharacterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A8D9DD2A196D3400BD46C1 /* CharacterFactory.swift */; };
+		46C9A77C2A17D000001049FA /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C9A77B2A17D000001049FA /* CharacterDetailViewController.swift */; };
 		46F85C0A2A178E530097EFC8 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 46F85C092A178E530097EFC8 /* AlamofireImage */; };
 /* End PBXBuildFile section */
 
@@ -35,8 +40,7 @@
 		46437AAD2A142BA7002DEC58 /* RickAndMortyAlamofire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyAlamofire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46437AB02A142BA7002DEC58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46437AB22A142BA7002DEC58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		46437AB42A142BA7002DEC58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		46437AB72A142BA7002DEC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		46437AB42A142BA7002DEC58 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		46437AB92A142BA8002DEC58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46437ABC2A142BA8002DEC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		46437ABE2A142BA8002DEC58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +54,11 @@
 		46A178822A16A30100603D61 /* RMResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMResponse.swift; sourceTree = "<group>"; };
 		46A178862A16A35000603D61 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		46A178882A177B3600603D61 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		46A8D9D32A1959DE00BD46C1 /* CharacterContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterContracts.swift; sourceTree = "<group>"; };
+		46A8D9D82A19682000BD46C1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		46A8D9DA2A1968F200BD46C1 /* CharacterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCoordinator.swift; sourceTree = "<group>"; };
+		46A8D9DD2A196D3400BD46C1 /* CharacterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFactory.swift; sourceTree = "<group>"; };
+		46C9A77B2A17D000001049FA /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46534A182A1BEEE100D08FDF /* SnapKit in Frameworks */,
 				46437AC62A142BCC002DEC58 /* Alamofire in Frameworks */,
 				46F85C0A2A178E530097EFC8 /* AlamofireImage in Frameworks */,
 			);
@@ -94,10 +104,8 @@
 		46437AAF2A142BA7002DEC58 /* RickAndMortyAlamofire */ = {
 			isa = PBXGroup;
 			children = (
-				46A178842A16A33A00603D61 /* ViewModels */,
+				46A8D9CD2A19571F00BD46C1 /* Modules */,
 				46432FF62A14D41E007949EF /* Network */,
-				46437AD22A142CAD002DEC58 /* Controllers */,
-				46437AD12A142CA5002DEC58 /* Views */,
 				46437AD02A142C91002DEC58 /* Others */,
 				46437AC72A142BEC002DEC58 /* Models */,
 			);
@@ -121,54 +129,92 @@
 		46437AD02A142C91002DEC58 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				46437ABB2A142BA8002DEC58 /* LaunchScreen.storyboard */,
 				46437AB02A142BA7002DEC58 /* AppDelegate.swift */,
 				46437AB22A142BA7002DEC58 /* SceneDelegate.swift */,
 				46437AB92A142BA8002DEC58 /* Assets.xcassets */,
 				46437ABE2A142BA8002DEC58 /* Info.plist */,
+				46A8D9D82A19682000BD46C1 /* Coordinator.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
 		};
-		46437AD12A142CA5002DEC58 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				46437AB62A142BA7002DEC58 /* Main.storyboard */,
-				46437ABB2A142BA8002DEC58 /* LaunchScreen.storyboard */,
-				46A178882A177B3600603D61 /* CharacterCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		46437AD22A142CAD002DEC58 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				46C9A7772A17CB3E001049FA /* AllCharacters */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		46A178842A16A33A00603D61 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				46A178852A16A34600603D61 /* CharacterViewModel */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		46A178852A16A34600603D61 /* CharacterViewModel */ = {
+		46A178842A16A33A00603D61 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				46A178862A16A35000603D61 /* CharacterViewModel.swift */,
+				46A8D9D32A1959DE00BD46C1 /* CharacterContracts.swift */,
 			);
-			path = CharacterViewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		46C9A7772A17CB3E001049FA /* AllCharacters */ = {
+		46A8D9CD2A19571F00BD46C1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				46437AB42A142BA7002DEC58 /* ViewController.swift */,
+				46A8D9DC2A196D1800BD46C1 /* CharacterFactory */,
+				46A8D9CE2A19577100BD46C1 /* Character */,
 			);
-			path = AllCharacters;
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		46A8D9CE2A19577100BD46C1 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				46A8D9D62A19676D00BD46C1 /* SubModules */,
+				46A8D9D52A19675600BD46C1 /* Coordinator */,
+				46A8D9CF2A1957C500BD46C1 /* View */,
+				46A178842A16A33A00603D61 /* ViewModel */,
+			);
+			path = Character;
+			sourceTree = "<group>";
+		};
+		46A8D9CF2A1957C500BD46C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46437AB42A142BA7002DEC58 /* CharacterViewController.swift */,
+				46A178882A177B3600603D61 /* CharacterCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46A8D9D12A19598800BD46C1 /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				46A8D9D22A1959A000BD46C1 /* View */,
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		46A8D9D22A1959A000BD46C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				46C9A77B2A17D000001049FA /* CharacterDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		46A8D9D52A19675600BD46C1 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				46A8D9DA2A1968F200BD46C1 /* CharacterCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		46A8D9D62A19676D00BD46C1 /* SubModules */ = {
+			isa = PBXGroup;
+			children = (
+				46A8D9D12A19598800BD46C1 /* CharacterDetail */,
+			);
+			path = SubModules;
+			sourceTree = "<group>";
+		};
+		46A8D9DC2A196D1800BD46C1 /* CharacterFactory */ = {
+			isa = PBXGroup;
+			children = (
+				46A8D9DD2A196D3400BD46C1 /* CharacterFactory.swift */,
+			);
+			path = CharacterFactory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +236,7 @@
 			packageProductDependencies = (
 				46437AC52A142BCC002DEC58 /* Alamofire */,
 				46F85C092A178E530097EFC8 /* AlamofireImage */,
+				46534A172A1BEEE100D08FDF /* SnapKit */,
 			);
 			productName = RickAndMortyAlamofire;
 			productReference = 46437AAD2A142BA7002DEC58 /* RickAndMortyAlamofire.app */;
@@ -222,6 +269,7 @@
 			packageReferences = (
 				46437AC42A142BCC002DEC58 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				46F85C082A178E530097EFC8 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				46534A162A1BEEE100D08FDF /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 46437AAE2A142BA7002DEC58 /* Products */;
 			projectDirPath = "";
@@ -239,7 +287,6 @@
 			files = (
 				46437ABD2A142BA8002DEC58 /* LaunchScreen.storyboard in Resources */,
 				46437ABA2A142BA8002DEC58 /* Assets.xcassets in Resources */,
-				46437AB82A142BA7002DEC58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,15 +298,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				46A178892A177B3600603D61 /* CharacterCell.swift in Sources */,
-				46437AB52A142BA7002DEC58 /* ViewController.swift in Sources */,
+				46437AB52A142BA7002DEC58 /* CharacterViewController.swift in Sources */,
 				46432FF82A14D42A007949EF /* RMService.swift in Sources */,
 				46A1787D2A16A23900603D61 /* Species.swift in Sources */,
 				46437AB12A142BA7002DEC58 /* AppDelegate.swift in Sources */,
+				46A8D9D42A1959DE00BD46C1 /* CharacterContracts.swift in Sources */,
+				46C9A77C2A17D000001049FA /* CharacterDetailViewController.swift in Sources */,
 				46A1787F2A16A29C00603D61 /* Status.swift in Sources */,
 				46937BB72A15423E007E5795 /* RMRequest.swift in Sources */,
 				46437AB32A142BA7002DEC58 /* SceneDelegate.swift in Sources */,
+				46A8D9DE2A196D3400BD46C1 /* CharacterFactory.swift in Sources */,
 				46937BB92A1542CE007E5795 /* EndPoint.swift in Sources */,
+				46A8D9DB2A1968F200BD46C1 /* CharacterCoordinator.swift in Sources */,
 				46A178872A16A35000603D61 /* CharacterViewModel.swift in Sources */,
+				46A8D9D92A19682000BD46C1 /* Coordinator.swift in Sources */,
 				46A1787B2A16A21800603D61 /* Gender.swift in Sources */,
 				46A178812A16A2DE00603D61 /* Info.swift in Sources */,
 				46A178832A16A30100603D61 /* RMResponse.swift in Sources */,
@@ -271,14 +323,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		46437AB62A142BA7002DEC58 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				46437AB72A142BA7002DEC58 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		46437ABB2A142BA8002DEC58 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -416,7 +460,6 @@
 				INFOPLIST_FILE = RickAndMortyAlamofire/Others/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -444,7 +487,6 @@
 				INFOPLIST_FILE = RickAndMortyAlamofire/Others/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -492,6 +534,14 @@
 				kind = branch;
 			};
 		};
+		46534A162A1BEEE100D08FDF /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		46F85C082A178E530097EFC8 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
@@ -507,6 +557,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 46437AC42A142BCC002DEC58 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		46534A172A1BEEE100D08FDF /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 46534A162A1BEEE100D08FDF /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 		46F85C092A178E530097EFC8 /* AlamofireImage */ = {
 			isa = XCSwiftPackageProductDependency;

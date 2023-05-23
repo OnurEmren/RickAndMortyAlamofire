@@ -9,4 +9,5 @@ import Foundation
 
 enum EndPoint: String {
     case character
+    case location
 }

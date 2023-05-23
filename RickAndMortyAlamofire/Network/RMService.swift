@@ -15,15 +15,16 @@ class ServiceEndPoint {
     }
 }
 
-protocol FetchCharacterProtocol {
+protocol RmServiceProtocol {
     func getData(response: @escaping ([Result]?) -> Void)
 }
 
 //Fetch Character Data
-struct RmService: FetchCharacterProtocol {
+struct RmService: RmServiceProtocol {
     func getData(response: @escaping ([Result]?) -> Void) {
         //Check url nil or not
         guard let url = URL(string: ServiceEndPoint.characterUrl()) else {
+            //add error
             response(nil)
             return
         }
