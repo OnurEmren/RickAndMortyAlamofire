@@ -2,7 +2,7 @@
 //  EndPoint.swift
 //  RickAndMortyAlamofire
 //
-//  Created by Severus Snape on 17.05.2023.
+//  Created by Onur Emren on 17.05.2023.
 //
 
 import Foundation

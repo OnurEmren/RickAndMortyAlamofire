@@ -2,7 +2,7 @@
 //  CharacterViewModel.swift
 //  RickAndMortyAlamofire
 //
-//  Created by Severus Snape on 18.05.2023.
+//  Created by Onur Emren on 18.05.2023.
 //
 
 import Foundation
