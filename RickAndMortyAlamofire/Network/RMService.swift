@@ -20,17 +20,13 @@ protocol RmServiceProtocol {
     func deleteData(_ item: [Result], completion: @escaping (Bool) -> Void)
 }
 
-//Fetch Character Data
 struct RmService: RmServiceProtocol {
     
     func getData(response: @escaping ([Result]?) -> Void) {
-        //Check url nil or not
         guard let url = URL(string: ServiceEndPoint.characterUrl()) else {
-            //add error
             response(nil)
             return
         }
-        //Request data
         AF.request(url).responseDecodable(of: RMResponse.self) { model in
             guard let data = model.value else {
                 response(nil)
@@ -39,7 +35,7 @@ struct RmService: RmServiceProtocol {
             response(data.results)
         }
     }
- 
+    
     func deleteData(_ item: [Result], completion: @escaping (Bool) -> Void) {
         guard let url = URL(string: "\(ServiceEndPoint.characterUrl())/\(item)") else {
             completion(false)

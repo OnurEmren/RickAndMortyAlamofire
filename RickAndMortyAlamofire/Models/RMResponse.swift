@@ -12,4 +12,3 @@ struct RMResponse: Codable {
     let results: [Result]?
 }
 
-//Add Error

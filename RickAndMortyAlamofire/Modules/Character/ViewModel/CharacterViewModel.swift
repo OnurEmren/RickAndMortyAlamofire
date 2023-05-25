@@ -8,11 +8,7 @@
 import Foundation
 
 final class CharacterViewModel: CharacterViewModelProtocol {
-  
     
-  
-    
-  
     var rickAndMortyCharacters: [Result] = []
     var coordinatorDelegate: CharacterCoordinatorDelegate?
     var delegate: CharacterViewModelDelegate?

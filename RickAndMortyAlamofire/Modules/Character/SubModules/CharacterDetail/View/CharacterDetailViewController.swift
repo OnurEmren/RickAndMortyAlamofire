@@ -31,8 +31,6 @@ final class CharacterDetailViewController: UIViewController {
         fillData()
     }
     
-    
-    
     private func configureDetailView() {
         view.addSubview(detailView)
         view.addSubview(nameLabel)

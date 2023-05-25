@@ -37,13 +37,14 @@ class CharacterCell: UITableViewCell {
     private let indicator: UIActivityIndicatorView = UIActivityIndicatorView()
     private let characterImage: UIImageView = UIImageView()
     private let randomImage = ""
-    static let identifier = "characterCell"
     private let verticalStackview: UIStackView = {
         let verticalStackView = UIStackView()
         verticalStackView.axis = .vertical
         verticalStackView.translatesAutoresizingMaskIntoConstraints = false
         return verticalStackView
     }()
+    static let identifier = "characterCell"
+
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -53,7 +54,7 @@ class CharacterCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     func configure(){
         backgroundColor = .systemYellow
         addSubview(nameLabel)

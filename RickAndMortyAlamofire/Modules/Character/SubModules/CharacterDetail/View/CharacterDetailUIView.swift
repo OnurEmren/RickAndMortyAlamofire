@@ -59,7 +59,7 @@ class CharacterDetailUIView: UIView {
     func configureDetailView(){
         
         backgroundColor = .systemPink
-       
+        
         addSubview(detailView)
         addSubview(verticalStackview)
         addSubview(detailNameLabel)
@@ -68,7 +68,7 @@ class CharacterDetailUIView: UIView {
         addSubview(originLabel)
         addSubview(episodeLabel)
         addSubview(detailImage)
-
+        
         setMyView()
         setVerticalStackView()
         setCharacterImage()
@@ -91,29 +91,29 @@ class CharacterDetailUIView: UIView {
             make.right.equalTo(-10)
             make.bottom.equalTo(-10)
         }
-
+        
         detailNameLabel.snp.makeConstraints { make in
             make.height.equalTo(200)
             make.width.equalTo(250)
         }
-
+        
         statusLabel.snp.makeConstraints { make in
             make.height.equalTo(200)
             make.width.equalTo(150)
         }
-
+        
         genderLabel.snp.makeConstraints { make in
             make.height.equalTo(50)
         }
-
+        
         originLabel.snp.makeConstraints { make in
             make.height.equalTo(50)
         }
-
+        
         episodeLabel.snp.makeConstraints { make in
             make.height.equalTo(50)
         }
-
+        
         detailImage.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(10)
             make.bottom.equalTo(detailNameLabel.snp.top).offset(-10)
@@ -185,7 +185,6 @@ class CharacterDetailUIView: UIView {
         episodeLabel.layer.cornerRadius = DetailConstants.verticalStackViewCornerRadius
         episodeLabel.layer.masksToBounds = true
     }
-    
     
     private func setCharacterImage() {
         detailImage.backgroundColor = .systemYellow

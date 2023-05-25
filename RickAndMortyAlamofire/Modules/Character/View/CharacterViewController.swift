@@ -54,7 +54,6 @@ class CharacterViewController: UIViewController {
         
     }
     
-    
     //MARK: - Set the view
     
     func setCharacterTableView(){
@@ -92,23 +91,6 @@ class CharacterViewController: UIViewController {
         let deletedCharacter = viewModel.deleteItem()
         results = deletedCharacter
         characterTableView.reloadData()
-    }
-    
-    private func showDeleteAlert() {
-        let alertController = UIAlertController(title: "Dikkat", message: "Bu karakteri silmek istediğinize emin misiniz?", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Evet", style: UIAlertAction.Style.default) {
-            UIAlertAction in
-        }
-        
-        let cancelAction = UIAlertAction(title: "Vazgeç", style: UIAlertAction.Style.cancel) {
-            UIAlertAction in
-            NSLog("Cancel Pressed")
-        }
-        
-        alertController.addAction(okAction)
-        alertController.addAction(cancelAction)
-        
-        self.present(alertController, animated: true, completion: nil)
     }
 }
 

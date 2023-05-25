@@ -7,9 +7,8 @@
 
 import Foundation
 
-// MARK: - RmInfo
-
 // MARK: - Result
+
 struct Result: Codable {
     let id: Int?
     let name: String?
