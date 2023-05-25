@@ -8,6 +8,11 @@
 import Foundation
 
 final class CharacterViewModel: CharacterViewModelProtocol {
+  
+    
+  
+    
+  
     var rickAndMortyCharacters: [Result] = []
     var coordinatorDelegate: CharacterCoordinatorDelegate?
     var delegate: CharacterViewModelDelegate?
@@ -27,6 +32,21 @@ final class CharacterViewModel: CharacterViewModelProtocol {
             self.rickAndMortyCharacters = response ?? []
             self.delegate?.handleViewOutput(output: .finished)
         }
+    }
+    
+    func deleteCharacter() {
+        delegate?.handleViewOutput(output: .delete(true))
+        rickAndMortyService.deleteData(rickAndMortyCharacters) {[weak self] deletedData in
+            guard let self = self else {
+                return
+            }
+            self.delegate?.handleViewOutput(output: .delete(true))
+            self.delegate?.handleViewOutput(output: .finished)
+        }
+    }
+    
+    func deleteItem() -> [Result] {
+        rickAndMortyCharacters
     }
     
     func getItems() -> [Result] {

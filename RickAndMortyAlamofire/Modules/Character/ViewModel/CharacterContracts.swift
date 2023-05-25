@@ -18,6 +18,8 @@ protocol CharacterViewModelProtocol {
     
     func getItems() -> [Result]
     func fetchItems()
+    func deleteCharacter()
+    func deleteItem() -> [Result]
 }
 
 protocol CharacterViewModelDelegate {
@@ -28,4 +30,5 @@ enum CharacterViewModelOutput {
     case setLoading(Bool)
     case showAlert
     case finished
+    case delete(Bool)
 }

@@ -14,8 +14,6 @@ class CharacterViewController: UIViewController {
     var characterTableView: UITableView = UITableView()
     private var nameLabel: UILabel = UILabel()
     private let indicator: UIActivityIndicatorView = UIActivityIndicatorView()
-    
-    var characterCell = CharacterCell()
     var viewModel: CharacterViewModelProtocol!
     private var results: [Result] = []
     
@@ -32,9 +30,18 @@ class CharacterViewController: UIViewController {
         
         configure()
         viewModel.fetchItems()
+        
+    }
+    
+    //MARK: - Navigate to Detail ViewController
+    
+    func goToDetail(character: Result) {
+        let characterDetailVC = CharacterDetailViewController(character: character)
+        navigationController?.pushViewController(characterDetailVC, animated: true)
     }
     
     //MARK: - Configure the view
+    
     func configure(){
         view.addSubview(nameLabel)
         view.addSubview(characterTableView)
@@ -75,7 +82,33 @@ class CharacterViewController: UIViewController {
         let characters = viewModel.getItems()
         results = characters
         characterTableView.reloadData()
+    }
+    
+    private func deleteData() {
+        guard let viewModel = viewModel else {
+            return
+        }
         
+        let deletedCharacter = viewModel.deleteItem()
+        results = deletedCharacter
+        characterTableView.reloadData()
+    }
+    
+    private func showDeleteAlert() {
+        let alertController = UIAlertController(title: "Dikkat", message: "Bu karakteri silmek istediğinize emin misiniz?", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Evet", style: UIAlertAction.Style.default) {
+            UIAlertAction in
+        }
+        
+        let cancelAction = UIAlertAction(title: "Vazgeç", style: UIAlertAction.Style.cancel) {
+            UIAlertAction in
+            NSLog("Cancel Pressed")
+        }
+        
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
 }
 
@@ -91,6 +124,8 @@ extension CharacterViewController: CharacterViewModelDelegate {
             print("Show Alert")
         case .finished:
             loadData()
+        case .delete:
+            deleteData()
         }
     }
 }
@@ -122,7 +157,7 @@ extension CharacterViewController {
     }
 }
 
-//MARK: - Table View
+//MARK: - Table View Extensions
 
 extension CharacterViewController: UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -143,5 +178,43 @@ extension CharacterViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let selectedCharacter = results[indexPath.row]
+        goToDetail(character: selectedCharacter)
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let alertController = UIAlertController(
+                title: "Dikkat",
+                message: "Bu öğeyi silmek istediğinizden emin misiniz?",
+                preferredStyle: .alert
+            )
+            
+            let deleteAction = UIAlertAction(
+                title: "Sil",
+                style: .destructive
+            ) { [weak self] _ in
+                guard let self = self else { return }
+                
+                self.results.remove(at: indexPath.row)
+                self.characterTableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            
+            alertController.addAction(deleteAction)
+            
+            let cancelAction = UIAlertAction(
+                title: "İptal",
+                style: .cancel,
+                handler: nil
+            )
+            
+            alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+        }
+    }
+
 }

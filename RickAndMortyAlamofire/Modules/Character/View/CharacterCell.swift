@@ -36,6 +36,8 @@ class CharacterCell: UITableViewCell {
     private let myView: UIView = UIView()
     private let indicator: UIActivityIndicatorView = UIActivityIndicatorView()
     private let characterImage: UIImageView = UIImageView()
+    private let randomImage = ""
+    static let identifier = "characterCell"
     private let verticalStackview: UIStackView = {
         let verticalStackView = UIStackView()
         verticalStackView.axis = .vertical
@@ -51,13 +53,7 @@ class CharacterCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    private let randomImage = ""
-    static let identifier = "characterCell"
-    
-    
-    
+
     func configure(){
         backgroundColor = .systemYellow
         addSubview(nameLabel)
@@ -90,7 +86,6 @@ class CharacterCell: UITableViewCell {
         
         statusLabel.snp.makeConstraints { make in
             make.height.equalTo(50)
-            
         }
         
         characterImage.snp.makeConstraints { make in

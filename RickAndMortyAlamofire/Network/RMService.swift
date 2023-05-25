@@ -17,10 +17,12 @@ class ServiceEndPoint {
 
 protocol RmServiceProtocol {
     func getData(response: @escaping ([Result]?) -> Void)
+    func deleteData(_ item: [Result], completion: @escaping (Bool) -> Void)
 }
 
 //Fetch Character Data
 struct RmService: RmServiceProtocol {
+    
     func getData(response: @escaping ([Result]?) -> Void) {
         //Check url nil or not
         guard let url = URL(string: ServiceEndPoint.characterUrl()) else {
@@ -35,6 +37,17 @@ struct RmService: RmServiceProtocol {
                 return
             }
             response(data.results)
+        }
+    }
+ 
+    func deleteData(_ item: [Result], completion: @escaping (Bool) -> Void) {
+        guard let url = URL(string: "\(ServiceEndPoint.characterUrl())/\(item)") else {
+            completion(false)
+            return
+        }
+        
+        AF.request(url, method: .delete).response { response in
+            completion(response.error == nil)
         }
     }
 }
